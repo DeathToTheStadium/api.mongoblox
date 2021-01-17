@@ -1,17 +1,17 @@
+const mongoose = require('mongoose')
+var opt = {useNewUrlParser:true,useUnifiedTopology:true}
 module.exports = {
     databases:{
+        //Creates a connection to the DATABASE
         lavagame:{
-            //Collections
-            collection1:'playerData',
-            collection2:'receiptInfo'
+            uri:`mongodb+srv://DeathToTheStadium:YGGYTv4FdTaumvg3@cluster0.uhrrw.mongodb.net/lavagame?retryWrites=true&w=majority`,
+            dbName:'lavagame' ,
+            collectionNames:['playerdata','receipts']
         },
         angryclause:{
-            collection1:'playerData',
-            collection2:'receiptInfo'
-        },
-        bloxbrawler:{
-            collection1:'playerData',
-            collection2:'receiptInfo'
+            uri:`mongodb+srv://DeathToTheStadium:YGGYTv4FdTaumvg3@cluster0.uhrrw.mongodb.net/angryclause?retryWrites=true&w=majority`,
+            dbName:'angryclause',
+            collectionNames:['playerdata','receipts']
         }
     }
 }

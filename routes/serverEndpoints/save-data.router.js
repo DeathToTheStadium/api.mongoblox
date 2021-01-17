@@ -1,10 +1,10 @@
-var express,router
+var express,router,middle
 express = require('express')
 router    = express.Router()
 
-router.post('/roblox/:collection/save-data',(req,res)=>{
-    
-})
+middle = require('../../controllers/serverEndpoints/save-data.controller')
+
+router.post('/:database/:collection/save-data',middle)
 
 
 module.exports = router

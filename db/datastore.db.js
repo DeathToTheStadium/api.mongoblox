@@ -1,12 +1,5 @@
-//Create Schema Model
-const mongoose = requre('mongoose')
-
-
-module.exports = new mongoose.Schema({
-    playerKey:{
-        Type:String,
-        maxlength:15
-    },
+// Schema
+module.exports = {
+    playerKey:String,
     data:Object,
-    metaData:Object
-})
+}
