@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
+require('dotenv').config()
 class CreateConn{
-    constructor(uri,options={useNewUrlParser:true,useUnifiedTopology:true},databasename){
+    constructor(uri,databasename,options={useNewUrlParser:true,useUnifiedTopology:true}){
         if(!uri){return console.error('uri must be specified')}
         if(!databasename){return console.error('pls specify the connection name')}
         this.conn = mongoose.createConnection(uri,options)
@@ -10,7 +11,7 @@ class CreateConn{
             console.log('there isnt a Connection ?')
         }
     
-        if (config.env === 'development') {
+        if (process.env.APPSTATE === 'development') {
             mongoose.set('debug', true);
         }
     
@@ -29,6 +30,8 @@ class CreateConn{
         this.conn.once('open', () => {
             console.log('connected')
         });
-        return {conn:this.conn,name:this.databasename}
     }
 }
+
+
+module.exports = CreateConn

@@ -1,10 +1,13 @@
 const save_data  = require('../../models/servermodels/save-data.model')
 const config     = require('../../config/db.config')
+const ConnDB     = require('../../models/index.models')
+
+// :database/:collection
 module.exports = function save(req,res,next){
-   let storage  = new save_data(config.databases[req.parmas.database],req.params.collection)
-   let val = storage.save(req.body,res)
-   if(val === true){
-       res.sendStatus(401)
-   }
-   res.send(storage)
+    for (var x in ConnDB){
+        if (req.params.database == ConnDB[x].name) {
+            console.log(ConnDB[x].conn)
+            res.sendStatus(200)
+        } 
+    }
 }
