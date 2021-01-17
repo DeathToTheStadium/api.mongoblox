@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Attempt 3",
   "main": "server.js",
-  "scripts": {},
+  "scripts": {
+    "start": "nodemon server.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/goldenexecutive/api.mongoblox.git"

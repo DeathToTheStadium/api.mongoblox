@@ -20,8 +20,8 @@ update = router.update
 
 //Setting routes
 app.use(save)
-app.use(fetch)
-app.use(update)
-app.use(del)
+// app.use(fetch)
+// app.use(update)
+// app.use(del)
 
 app.listen(process.env.DATASTOREPORT,console.log(`SERVER RUNNING ON PORT: ${process.env.DATASTOREPORT}`))
