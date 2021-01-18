@@ -1,4 +1,4 @@
-class save_data{
+class fetch_data{
     constructor(db,collection){
        this.model = db.conn.model(collection)
     }

@@ -24,4 +24,8 @@ app.use(save)
 // app.use(update)
 // app.use(del)
 
+app.get('/',(req,res)=>{
+    res.sendFile('welcomepage.html')
+})
+
 app.listen(process.env.DATASTOREPORT,console.log(`SERVER RUNNING ON PORT: ${process.env.DATASTOREPORT}`))

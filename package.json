@@ -14,7 +14,8 @@
     "mongodb",
     "roblox",
     "mongoose",
-    "datastore"
+    "datastore",
+    "api"
   ],
   "author": "Joseph",
   "license": "SEE LICENSE IN LICENSE",
