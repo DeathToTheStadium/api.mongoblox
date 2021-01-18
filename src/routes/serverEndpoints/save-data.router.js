@@ -1,10 +1,8 @@
-var express,router,middle
-express = require('express')
-router    = express.Router()
+var router,save_data
+router    = require('express').Router()
 
-middle = require('../../controllers/serverEndpoints/save-data.controller')
-
-router.post('/:database/:collection/save-data',middle)
+save_data = require('../../controllers/serverEndpoints/save-data.controller')
+router.post('/:database/:collection/save-data',save_data)
 
 
 module.exports = router

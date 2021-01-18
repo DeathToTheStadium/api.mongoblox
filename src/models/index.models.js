@@ -37,5 +37,5 @@ function CompileConnections(DbConfig){
     recurse(dbConfig)
     return conn
 }
-
-module.exports = CompileConnections(configs)
+var Connections = CompileConnections(configs)
+module.exports = Connections
