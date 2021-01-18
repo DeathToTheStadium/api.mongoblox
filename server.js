@@ -12,7 +12,7 @@ app.use(bodyparser.urlencoded({extended:true}))
 
 
 var router,fetch,save,del,update
-router = require('./routes/index.router')
+router = require('./src/routes/index.router')
 save   = router.save
 fetch  = router.fetch
 del    = router.delete
