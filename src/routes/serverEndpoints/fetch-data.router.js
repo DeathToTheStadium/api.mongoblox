@@ -6,3 +6,4 @@ router.post('/:database/:collection/fetch-data',fetch_data)
 
 
 module.exports = router
+
