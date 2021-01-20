@@ -1,5 +1,5 @@
 // Schema
 module.exports = {
-    playerKey:String,
+    playerKey:{type:String,index: { unique: true }},
     data:Object,
 }

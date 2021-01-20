@@ -3,10 +3,11 @@ class fetch_data{
        this.model = db.conn.model(collection)
     }
 
-    save(data){
-        this.model = new this.model(data)
-        this.model.save(console.log)
+    find(data){
+        var data;
+        data = this.model.find
+        return data
     }
 }
 
-module.exports = save_data
+module.exports = fetch_data
